@@ -33,6 +33,7 @@ class AvailableServiceTableViewCell: UITableViewCell, Identifiable {
         guard let name = model.name, let price = model.price else {
             return
         }
+        self.price = Double(price)
         availableServiceLabel?.text = name + " - R$ " + String(format: "%.2f", Double(price))
     }
     
@@ -40,6 +41,7 @@ class AvailableServiceTableViewCell: UITableViewCell, Identifiable {
         guard let name = model.name, let channels = model.channels, let price = model.price else {
             return
         }
+        self.price = Double(price)
         availableServiceLabel?.text = "TV " +  name + " - " + channels + " - R$ " + String(format: "%.2f", price)
     }
     

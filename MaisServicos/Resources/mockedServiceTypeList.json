@@ -1,0 +1,21 @@
+[
+     {
+         "id" : 1,
+         "name" : "Mix HD",
+         "price" : 59.00,
+         "channels" : "222 canais"
+     },
+     {
+         "id" : 2,
+         "name" : "Fácil HD",
+         "price" : 79.99,
+         "channels" : "112 canais"
+     },
+     {
+         "id" : 3,
+         "name" : "Top HD",
+         "price" : 139.99,
+         "channels" : "259 canais"
+     }
+
+ ]
