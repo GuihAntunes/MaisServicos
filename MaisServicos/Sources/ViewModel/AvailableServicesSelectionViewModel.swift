@@ -17,6 +17,7 @@ protocol AvailableServicesSelectionViewModelDelegate: class {
     func getModelServiceForTV(forIndex index: Int) -> AvailableServicesForTV
     var currentCategory: AvailableServicesCategory { get }
     func setCurrentCategory(forIndex index : Int)
+    var draft : ServicesSubscriptionDraft { get set }
 }
 
 enum AvailableServicesCategory {
@@ -37,7 +38,7 @@ class AvailableServicesSelectionViewModel: AvailableServicesSelectionViewModelDe
             loadContent()
         }
     }
-    
+    var draft = ServicesSubscriptionDraft()
     
     
     init(view: AvailableServicesSelectionPresentable?, provider: AvailableServicesDataAccess = AvailableServicesProvider()) {

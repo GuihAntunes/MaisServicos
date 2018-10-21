@@ -41,4 +41,24 @@ extension AvailableServicesSelectionViewController: UITableViewDataSource, UITab
         return 50
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? AvailableServiceTableViewCell, let allCells = tableView.visibleCells as? [AvailableServiceTableViewCell] else { return }
+        allCells.forEach({ $0.shouldSelectCell(false) })
+        cell.shouldSelectCell(true)
+        switch viewModel.currentCategory {
+        case .internet:
+            viewModel.draft.internetService = cell.availableServiceLabel?.text
+            viewModel.draft.internetPrice = cell.price
+        case .phone:
+            viewModel.draft.phoneService = cell.availableServiceLabel?.text
+            viewModel.draft.phonePrice = cell.price
+        case .tv:
+            viewModel.draft.tvService = cell.availableServiceLabel?.text
+            viewModel.draft.tvPrice = cell.price
+        }
+        
+        let total = viewModel.draft.tvPrice + viewModel.draft.internetPrice + viewModel.draft.phonePrice
+        summaryValue?.text = "Total: R$ " + String(format: "%.2f", total)
+    }
+    
 }

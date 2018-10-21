@@ -13,6 +13,11 @@ class ServiceTypeTableViewCell: UITableViewCell, Identifiable {
     @IBOutlet weak var serviceTypeImage: UIImageView?
     @IBOutlet weak var serviceTypeLabel: UILabel?
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        selectionStyle = .none
+    }
+    
     func fill(withModel model : ServiceType) {
         guard let imageName = model.imageName, let image = UIImage(named: imageName), let serviceTypeName = model.name else {
             return
