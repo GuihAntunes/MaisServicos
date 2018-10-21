@@ -23,5 +23,14 @@ extension ServiceTypeSelectionViewController : UITableViewDataSource, UITableVie
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            performSegue(withIdentifier: "ShowServiceOptionsSegue", sender: self)
+        default:
+            print("Present soon alert!")
+        }
+    }
+    
     
 }

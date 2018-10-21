@@ -25,7 +25,7 @@
 		0E670E55217C513400B029B0 /* ServiceTypeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E670E54217C513400B029B0 /* ServiceTypeProvider.swift */; };
 		0E670E57217C538500B029B0 /* mockedServiceTypeList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E670E56217C538500B029B0 /* mockedServiceTypeList.json */; };
 		0E670E5A217C588100B029B0 /* ServiceTypeMockedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E670E59217C588100B029B0 /* ServiceTypeMockedRouter.swift */; };
-		0E670E5C217C6A0B00B029B0 /* AvailableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E670E5B217C6A0B00B029B0 /* AvailableService.swift */; };
+		0E670E5C217C6A0B00B029B0 /* AvailableServiceForInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E670E5B217C6A0B00B029B0 /* AvailableServiceForInternet.swift */; };
 		0E670E5E217C6A5600B029B0 /* AvailableOffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E670E5D217C6A5600B029B0 /* AvailableOffer.swift */; };
 		0E670E61217C6B3A00B029B0 /* AvailableServicesSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E670E60217C6B3A00B029B0 /* AvailableServicesSelectionViewController.swift */; };
 		0E670E63217C6BD800B029B0 /* AvailableServicesSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E670E62217C6BD800B029B0 /* AvailableServicesSelectionViewModel.swift */; };
@@ -34,6 +34,10 @@
 		0E670E6A217C6D6200B029B0 /* AvailableServicesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E670E69217C6D6200B029B0 /* AvailableServicesProvider.swift */; };
 		0E670E6C217C6ED200B029B0 /* URLS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E670E6B217C6ED200B029B0 /* URLS.swift */; };
 		0E670E6E217C756A00B029B0 /* URLRequestConvertible+Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E670E6D217C756A00B029B0 /* URLRequestConvertible+Router.swift */; };
+		0E670E70217C7A1A00B029B0 /* AvailableServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E670E6F217C7A1A00B029B0 /* AvailableServiceTableViewCell.swift */; };
+		0E670E72217C7B2E00B029B0 /* AvailableServicesSelectionViewController+List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E670E71217C7B2E00B029B0 /* AvailableServicesSelectionViewController+List.swift */; };
+		0E670E74217C7FFC00B029B0 /* AvailableServicesForPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E670E73217C7FFC00B029B0 /* AvailableServicesForPhone.swift */; };
+		0E670E76217C804900B029B0 /* AvailableServicesForTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E670E75217C804900B029B0 /* AvailableServicesForTV.swift */; };
 		C8AB583FE26667A5AA9A3476 /* Pods_MaisServicos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7CF23F8CE946DDD504BAEA /* Pods_MaisServicos.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +62,7 @@
 		0E670E54217C513400B029B0 /* ServiceTypeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTypeProvider.swift; sourceTree = "<group>"; };
 		0E670E56217C538500B029B0 /* mockedServiceTypeList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mockedServiceTypeList.json; sourceTree = "<group>"; };
 		0E670E59217C588100B029B0 /* ServiceTypeMockedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTypeMockedRouter.swift; sourceTree = "<group>"; };
-		0E670E5B217C6A0B00B029B0 /* AvailableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableService.swift; sourceTree = "<group>"; };
+		0E670E5B217C6A0B00B029B0 /* AvailableServiceForInternet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableServiceForInternet.swift; sourceTree = "<group>"; };
 		0E670E5D217C6A5600B029B0 /* AvailableOffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableOffer.swift; sourceTree = "<group>"; };
 		0E670E60217C6B3A00B029B0 /* AvailableServicesSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableServicesSelectionViewController.swift; sourceTree = "<group>"; };
 		0E670E62217C6BD800B029B0 /* AvailableServicesSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableServicesSelectionViewModel.swift; sourceTree = "<group>"; };
@@ -67,6 +71,10 @@
 		0E670E69217C6D6200B029B0 /* AvailableServicesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableServicesProvider.swift; sourceTree = "<group>"; };
 		0E670E6B217C6ED200B029B0 /* URLS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLS.swift; sourceTree = "<group>"; };
 		0E670E6D217C756A00B029B0 /* URLRequestConvertible+Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequestConvertible+Router.swift"; sourceTree = "<group>"; };
+		0E670E6F217C7A1A00B029B0 /* AvailableServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableServiceTableViewCell.swift; sourceTree = "<group>"; };
+		0E670E71217C7B2E00B029B0 /* AvailableServicesSelectionViewController+List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvailableServicesSelectionViewController+List.swift"; sourceTree = "<group>"; };
+		0E670E73217C7FFC00B029B0 /* AvailableServicesForPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableServicesForPhone.swift; sourceTree = "<group>"; };
+		0E670E75217C804900B029B0 /* AvailableServicesForTV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableServicesForTV.swift; sourceTree = "<group>"; };
 		1F7CF23F8CE946DDD504BAEA /* Pods_MaisServicos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MaisServicos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A65148825D5446418F66A4EF /* Pods-MaisServicos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaisServicos.release.xcconfig"; path = "Pods/Target Support Files/Pods-MaisServicos/Pods-MaisServicos.release.xcconfig"; sourceTree = "<group>"; };
 		AB2E0D57CBA7287B9F3D4AA6 /* Pods-MaisServicos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaisServicos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MaisServicos/Pods-MaisServicos.debug.xcconfig"; sourceTree = "<group>"; };
@@ -161,8 +169,10 @@
 			isa = PBXGroup;
 			children = (
 				0E670E52217C4CF100B029B0 /* ServiceType.swift */,
-				0E670E5B217C6A0B00B029B0 /* AvailableService.swift */,
+				0E670E5B217C6A0B00B029B0 /* AvailableServiceForInternet.swift */,
 				0E670E5D217C6A5600B029B0 /* AvailableOffer.swift */,
+				0E670E73217C7FFC00B029B0 /* AvailableServicesForPhone.swift */,
+				0E670E75217C804900B029B0 /* AvailableServicesForTV.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -220,6 +230,8 @@
 			children = (
 				0E670E60217C6B3A00B029B0 /* AvailableServicesSelectionViewController.swift */,
 				0E670E64217C6CB500B029B0 /* AvailableServicesSelectionViewController+View.swift */,
+				0E670E6F217C7A1A00B029B0 /* AvailableServiceTableViewCell.swift */,
+				0E670E71217C7B2E00B029B0 /* AvailableServicesSelectionViewController+List.swift */,
 			);
 			path = AvailableServicesSelection;
 			sourceTree = "<group>";
@@ -372,15 +384,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E670E5A217C588100B029B0 /* ServiceTypeMockedRouter.swift in Sources */,
+				0E670E72217C7B2E00B029B0 /* AvailableServicesSelectionViewController+List.swift in Sources */,
 				0E670E4F217C4AEC00B029B0 /* ServiceTypeSelectionViewController+View.swift in Sources */,
 				0E670E5E217C6A5600B029B0 /* AvailableOffer.swift in Sources */,
+				0E670E70217C7A1A00B029B0 /* AvailableServiceTableViewCell.swift in Sources */,
 				0E670E3F217C38CA00B029B0 /* Identifiable.swift in Sources */,
 				0E670E3C217C38CA00B029B0 /* UIViewController+Identifiable.swift in Sources */,
-				0E670E5C217C6A0B00B029B0 /* AvailableService.swift in Sources */,
+				0E670E5C217C6A0B00B029B0 /* AvailableServiceForInternet.swift in Sources */,
 				0E670E6E217C756A00B029B0 /* URLRequestConvertible+Router.swift in Sources */,
 				0E670E4B217C491F00B029B0 /* ServiceTypeSelection+List.swift in Sources */,
 				0E670E51217C4BF900B029B0 /* ServiceTypeTableViewCell.swift in Sources */,
 				0E670E3E217C38CA00B029B0 /* AppDelegate.swift in Sources */,
+				0E670E76217C804900B029B0 /* AvailableServicesForTV.swift in Sources */,
 				0E670E48217C48E100B029B0 /* ServiceTypeSelectionViewController.swift in Sources */,
 				0E670E55217C513400B029B0 /* ServiceTypeProvider.swift in Sources */,
 				0E670E65217C6CB500B029B0 /* AvailableServicesSelectionViewController+View.swift in Sources */,
@@ -391,6 +406,7 @@
 				0E670E4D217C497100B029B0 /* ServiceTypeSelectionViewModel.swift in Sources */,
 				0E670E61217C6B3A00B029B0 /* AvailableServicesSelectionViewController.swift in Sources */,
 				0E670E46217C3A8700B029B0 /* APIClient.swift in Sources */,
+				0E670E74217C7FFC00B029B0 /* AvailableServicesForPhone.swift in Sources */,
 				0E670E63217C6BD800B029B0 /* AvailableServicesSelectionViewModel.swift in Sources */,
 				0E670E68217C6D5100B029B0 /* AvailableServicesRouter.swift in Sources */,
 				0E670E53217C4CF100B029B0 /* ServiceType.swift in Sources */,

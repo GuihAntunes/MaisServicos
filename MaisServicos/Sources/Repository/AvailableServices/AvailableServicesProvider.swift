@@ -9,28 +9,65 @@
 import Promises
 
 protocol AvailableServicesDataAccess: class {
-    func getAvailableServices() -> Promise<[AvailableService]>
+    func getAvailableServicesForInternet() -> Promise<[AvailableServiceForInternet]>
+    func getAvailableServicesForPhone() -> Promise<[AvailableServicesForPhone]>
+    func getAvailableServicesForTV() -> Promise<[AvailableServicesForTV]>
 }
 
 class AvailableServicesProvider: AvailableServicesDataAccess {
+    
     let client: APIClient
     
     init(apiClient: APIClient = APIClient()) {
         self.client = apiClient
     }
     
-    func getAvailableServices() -> Promise<[AvailableService]> {
-        return Promise<[AvailableService]> { [weak self] fulfill, reject in
+    func getAvailableServicesForInternet() -> Promise<[AvailableServiceForInternet]> {
+        return Promise<[AvailableServiceForInternet]> { [weak self] fulfill, reject in
             guard let _self = self else {
                 reject(CustomError.deallocatedClass("Classe dealocada!"))
                 return
             }
             
-            _self.client.request(model: [AvailableService].self, ServiceTypeRouter.getServicesTypes()).then({ (list) in
+            _self.client.request(model: [AvailableServiceForInternet].self, AvailableServicesRouter.getAvailableServicesForInternet()).then({ (list) in
+                fulfill(list)
+            }).catch({ (error) in
+                reject(error)
+            })
+        }
+
+    }
+    
+    func getAvailableServicesForPhone() -> Promise<[AvailableServicesForPhone]> {
+        return Promise<[AvailableServicesForPhone]> {
+            [weak self] fulfill, reject in
+            guard let _self = self else {
+                reject(CustomError.deallocatedClass("Classe dealocada!"))
+                return
+            }
+            
+            _self.client.request(model: [AvailableServicesForPhone].self, AvailableServicesRouter.getAvailableServicesForPhone()).then({ (list) in
                 fulfill(list)
             }).catch({ (error) in
                 reject(error)
             })
         }
     }
+    
+    func getAvailableServicesForTV() -> Promise<[AvailableServicesForTV]> {
+        return Promise<[AvailableServicesForTV]> {
+            [weak self] fulfill, reject in
+            guard let _self = self else {
+                reject(CustomError.deallocatedClass("Classe dealocada!"))
+                return
+            }
+            
+            _self.client.request(model: [AvailableServicesForTV].self, AvailableServicesRouter.getAvailableServicesForTV()).then({ (list) in
+                fulfill(list)
+            }).catch({ (error) in
+                reject(error)
+            })
+        }
+    }
+    
 }

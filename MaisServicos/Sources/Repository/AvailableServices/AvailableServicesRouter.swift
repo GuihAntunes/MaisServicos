@@ -10,14 +10,20 @@ import Alamofire
 
 enum AvailableServicesRouter: CustomRouter {
 
-    case availableServicesForInternet()
+    case getAvailableServicesForInternet()
+    case getAvailableServicesForPhone()
+    case getAvailableServicesForTV()
     
     /**
      * Path according to route */
     var path: String {
         switch self {
-        case .availableServicesForInternet:
-            return URLS.ServiceType.typesList
+        case .getAvailableServicesForInternet:
+            return URLS.AvailableServices.servicesListForInternet
+        case .getAvailableServicesForPhone:
+            return URLS.AvailableServices.servicesListForPhone
+        case .getAvailableServicesForTV:
+            return URLS.AvailableServices.servicesListForTV
         }
     }
     
@@ -25,7 +31,7 @@ enum AvailableServicesRouter: CustomRouter {
      * HTTP method according to route */
     var method: HTTPMethod {
         switch self {
-        case .availableServicesForInternet:
+        default:
             return .get
         }
     }

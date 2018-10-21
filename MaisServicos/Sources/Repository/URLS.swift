@@ -17,4 +17,10 @@ struct URLS {
         static let typesList = "/serviceTypeList"
     }
     
+    struct AvailableServices {
+        static let servicesListForInternet = "/availableServicesForInternet"
+        static let servicesListForPhone = "/servicesListForPhone"
+        static let servicesListForTV = "/servicesListForTV"
+    }
+    
 }

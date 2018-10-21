@@ -1,82 +1,21 @@
 [
      {
-        "connectionSpeed" : "40 MB",
-        "offers" : [
-            {
-                "id" : 1,
-                "name" : "NET",
-                "price" : 59.99
-            },
-            {
-                "id" : 2,
-                "name" : "Vivo",
-                "price" : 125.00
-            },
-            {
-                "id" : 3,
-                "name" : "TIM",
-                "price" : 105.00
-            }
-        ]
+         "id" : 1,
+         "name" : "Mix HD",
+         "price" : 59.00,
+         "channels" : "222 canais"
      },
      {
-         "connectionSpeed" : "60 MB",
-         "offers" : [
-             {
-                 "id" : 1,
-                 "name" : "NET",
-                 "price" : 79.00
-             },
-             {
-                 "id" : 2,
-                 "name" : "Vivo",
-                 "price" : 145.00
-             },
-             {
-                 "id" : 3,
-                 "name" : "TIM",
-                 "price" : 105.80
-             }
-         ]
+         "id" : 2,
+         "name" : "Fácil HD",
+         "price" : 79.99,
+         "channels" : "112 canais"
      },
      {
-         "connectionSpeed" : "100 MB",
-         "offers" : [
-             {
-                 "id" : 1,
-                 "name" : "NET",
-                 "price" : 79.00
-             },
-             {
-                 "id" : 2,
-                 "name" : "Vivo",
-                 "price" : 165.00
-             },
-             {
-                 "id" : 3,
-                 "name" : "TIM",
-                 "price" : 97.50
-             }
-         ]
-     },
-     {
-         "connectionSpeed" : "200 MB",
-         "offers" : [
-             {
-                 "id" : 1,
-                 "name" : "NET",
-                 "price" : 139.00
-             },
-             {
-                 "id" : 2,
-                 "name" : "Vivo",
-                 "price" : 185.00
-             },
-             {
-                 "id" : 3,
-                 "name" : "TIM",
-                 "price" : 120.00
-             }
-         ]
+         "id" : 3,
+         "name" : "Top HD",
+         "price" : 139.99,
+         "channels" : "259 canais"
      }
+     
  ]

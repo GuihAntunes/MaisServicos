@@ -1,5 +1,5 @@
 //
-//  AvailableOffer.swift
+//  AvailableServicesForPhone.swift
 //  MaisServicos
 //
 //  Created by Guilherme Antunes on 21/10/18.
@@ -8,20 +8,16 @@
 
 import Foundation
 
-struct AvailableOffer: Codable, Equatable {
+struct AvailableServicesForPhone: Codable {
     
     var id: Int?
-    var name: String?
-    var price: Double?
+    var name : String?
+    var price: Int?
     
     enum CodingKeys: String, CodingKey {
         case id
         case name
         case price
-    }
-    
-    static func ==(lhs: AvailableOffer, rhs: AvailableOffer) -> Bool {
-        return lhs.id == rhs.id
     }
     
 }

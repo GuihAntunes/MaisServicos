@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct AvailableService: Codable {
+struct AvailableServiceForInternet: Codable {
     
     var connectionSpeed : String?
     var offers: [AvailableOffer]?
