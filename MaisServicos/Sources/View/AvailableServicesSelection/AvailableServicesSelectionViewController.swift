@@ -13,6 +13,7 @@ class AvailableServicesSelectionViewController: UIViewController {
     @IBOutlet weak var servicesTableView: UITableView?
     @IBOutlet weak var servicesSegmentedControl: UISegmentedControl?
     @IBOutlet weak var summaryValue: UILabel?
+    @IBOutlet weak var confirmButton: UIButton?
     
     lazy var viewModel: AvailableServicesSelectionViewModelDelegate = AvailableServicesSelectionViewModel(view: self)
     
@@ -26,6 +27,8 @@ class AvailableServicesSelectionViewController: UIViewController {
         servicesTableView?.delegate = self
         servicesTableView?.dataSource = self
         summaryValue?.text = "Total: R$ 0.00"
+        confirmButton?.clipsToBounds = true
+        confirmButton?.layer.cornerRadius = 0.2 * (confirmButton?.bounds.size.width ?? CGFloat(0))
     }
     
     @IBAction func categoryChanged(_ sender: UISegmentedControl) {
