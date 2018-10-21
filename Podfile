@@ -6,5 +6,9 @@ target 'MaisServicos' do
   use_frameworks!
 
   # Pods for MaisServicos
+  pod 'Alamofire'
+  pod 'lottie-ios'
+  pod 'ReachabilitySwift'
+  pod 'PromisesSwift', '~> 1.2.3'
 
 end

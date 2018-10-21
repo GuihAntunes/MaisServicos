@@ -1,0 +1,6 @@
+framework module Pods_MaisServicos {
+  umbrella header "Pods-MaisServicos-umbrella.h"
+
+  export *
+  module * { export * }
+}
