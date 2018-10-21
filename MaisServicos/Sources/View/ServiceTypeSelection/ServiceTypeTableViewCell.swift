@@ -18,11 +18,12 @@ class ServiceTypeTableViewCell: UITableViewCell, Identifiable {
         selectionStyle = .none
     }
     
-    func fill(withModel model : ServiceType) {
+    func fill(withModel model : ServiceType, andColor color : UIColor) {
         guard let imageName = model.imageName, let image = UIImage(named: imageName), let serviceTypeName = model.name else {
             return
         }
         serviceTypeImage?.image = image
+        serviceTypeImage?.tintColor = color
         serviceTypeLabel?.text = serviceTypeName
     }
     

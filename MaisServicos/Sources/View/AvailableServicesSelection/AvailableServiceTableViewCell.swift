@@ -26,14 +26,14 @@ class AvailableServiceTableViewCell: UITableViewCell, Identifiable {
             return
         }
         self.price = price
-        availableServiceLabel?.text = "Internet " + name + " - R$ " + String(format: "%.2f", price)
+        availableServiceLabel?.text = name + " - R$ " + String(format: "%.2f", price)
     }
     
     func fill(withPhoneModel model : AvailableServicesForPhone) {
         guard let name = model.name, let price = model.price else {
             return
         }
-        availableServiceLabel?.text = "Ligações para telefone " + name + " - R$ " + String(format: "%.2f", Double(price))
+        availableServiceLabel?.text = name + " - R$ " + String(format: "%.2f", Double(price))
     }
     
     func fill(withTVModel model : AvailableServicesForTV) {

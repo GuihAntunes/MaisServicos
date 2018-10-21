@@ -6,13 +6,14 @@
 //  Copyright © 2018 Guilherme Antunes. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol ServiceTypeSelectionViewModelDelegate: class {
     func loadContent()
     func numberOfSections() -> Int
     func numberOfRows() -> Int
     func getModel(forIndex index: Int) -> ServiceType
+    func getColor(forIndex index : Int) -> UIColor
 }
 
 class ServiceTypeSelectionViewModel: ServiceTypeSelectionViewModelDelegate {
@@ -20,10 +21,12 @@ class ServiceTypeSelectionViewModel: ServiceTypeSelectionViewModelDelegate {
     var view: ServiceTypeSelectionPresentable?
     var typesList = [ServiceType]()
     var provider: ServiceTypeDataAccess?
+    var colors = [UIColor]()
     
     init(view: ServiceTypeSelectionPresentable?, provider: ServiceTypeDataAccess = ServiceTypeProvider()) {
         self.view = view
         self.provider = provider
+        fillColors()
     }
     
     func loadContent() {
@@ -49,6 +52,17 @@ class ServiceTypeSelectionViewModel: ServiceTypeSelectionViewModelDelegate {
     
     func getModel(forIndex index: Int) -> ServiceType {
         return typesList[index]
+    }
+    
+    func fillColors() {
+        colors.append(UIColor(red: 186/255, green: 21/255, blue: 245/255, alpha: 1.0))
+        colors.append(UIColor(red: 220/255, green: 48/255, blue: 141/255, alpha: 1.0))
+        colors.append(UIColor(red: 255/255, green: 104/255, blue: 55/255, alpha: 1.0))
+        colors.append(UIColor(red: 255/255, green: 144/255, blue: 34/255, alpha: 1.0))
+    }
+    
+    func getColor(forIndex index : Int) -> UIColor {
+        return colors[index]
     }
     
 }

@@ -19,7 +19,7 @@ extension ServiceTypeSelectionViewController : UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : ServiceTypeTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-        cell.fill(withModel: viewModel.getModel(forIndex: indexPath.row))
+        cell.fill(withModel: viewModel.getModel(forIndex: indexPath.row), andColor: viewModel.getColor(forIndex: indexPath.row))
         return cell
     }
     
@@ -28,7 +28,12 @@ extension ServiceTypeSelectionViewController : UITableViewDataSource, UITableVie
         case 0:
             performSegue(withIdentifier: "ShowServiceOptionsSegue", sender: self)
         default:
-            print("Present soon alert!")
+            let alertController = UIAlertController(title: "Logo mais!", message: "Em breve mais facilidades pra você!", preferredStyle: .alert)
+            
+            let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alertController.addAction(action)
+            
+            present(alertController, animated: true, completion: nil)
         }
     }
     
